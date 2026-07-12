@@ -1,3 +1,7 @@
+output "data_factory_linked_service_sql_managed_instances_id" {
+  description = "Map of id values across all data_factory_linked_service_sql_managed_instances, keyed the same as var.data_factory_linked_service_sql_managed_instances"
+  value       = { for k, v in azurerm_data_factory_linked_service_sql_managed_instance.data_factory_linked_service_sql_managed_instances : k => v.id }
+}
 output "data_factory_linked_service_sql_managed_instances_annotations" {
   description = "Map of annotations values across all data_factory_linked_service_sql_managed_instances, keyed the same as var.data_factory_linked_service_sql_managed_instances"
   value       = { for k, v in azurerm_data_factory_linked_service_sql_managed_instance.data_factory_linked_service_sql_managed_instances : k => v.annotations }
